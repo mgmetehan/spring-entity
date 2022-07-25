@@ -29,6 +29,9 @@ public class Privilege {
     @OneToMany(mappedBy = "privilege")
     private List<UserPrivilege> userPrivileges = new ArrayList<>();
 
+    @ManyToMany(mappedBy = "privileges", fetch = FetchType.LAZY)
+    private List<PrivilegeGroupMapping> privilegeGroupMappings;
+
 }
 
 

@@ -58,6 +58,9 @@ public class Account {
     @OneToMany(mappedBy = "account", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<AccountAddress> accountAddresses = new ArrayList<>();
 
+    @OneToOne(mappedBy = "account", cascade = CascadeType.ALL)
+    private AccountHistory accountHistory;
+
     enum IdType {
         TCKN, VKN
     }

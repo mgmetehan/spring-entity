@@ -38,6 +38,14 @@ public class Channel {
     @ManyToMany(mappedBy = "channels", fetch = FetchType.LAZY)
     private List<SubscriptionHistory> subscriptionHistory = new ArrayList<>();
 
+    @ManyToMany(mappedBy = "channels", fetch = FetchType.LAZY)
+    private List<AccountHistory> accountHistories;
+
+    @ManyToMany(mappedBy = "channels", fetch = FetchType.LAZY)
+    private List<UserHistory> userHistories;
+
+    @ManyToMany(mappedBy = "channels", fetch = FetchType.LAZY)
+    private List<UserPackagesHistory> userPackagesHistories;
     enum Name {
         DBS, YAANI, BIP_MEET, LIFE_BOX, SUIT;
     }

@@ -30,6 +30,9 @@ public class UserPackages {
     @JoinColumn(name = "subscription_id")
     private Subscription subscriptions;
 
+    @OneToOne(mappedBy = "userPackages", cascade = CascadeType.ALL)
+    private UserPackagesHistory userPackagesHistory;
+
 }
 
 

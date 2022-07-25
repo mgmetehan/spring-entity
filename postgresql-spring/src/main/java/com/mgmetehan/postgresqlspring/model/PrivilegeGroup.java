@@ -21,6 +21,9 @@ public class PrivilegeGroup {
 
     @ManyToMany(mappedBy = "privilegeGroups", fetch = FetchType.LAZY)
     private List<Account> accounts;
+
+    @ManyToMany(mappedBy = "privilegeGroups", fetch = FetchType.LAZY)
+    private List<PrivilegeGroupMapping> privilegeGroupMappings;
 }
 
 

@@ -24,4 +24,10 @@ public class Reason {
 
     @OneToMany(mappedBy = "reason", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<SubscriptionHistory> subscriptionHistory = new ArrayList<>();
+
+    @OneToMany(mappedBy = "reason", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<AccountHistory> accountHistories = new ArrayList<>();
+
+    @OneToMany(mappedBy = "reason", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<UserHistory> userHistories = new ArrayList<>();
 }
